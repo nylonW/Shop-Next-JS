@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_requests",
+  "info": {
+    "name": "Order request"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "name": {
+      "type": "string"
+    },
+    "product": {
+      "via": "order_requests",
+      "model": "product"
+    }
+  }
+}
